@@ -1,0 +1,106 @@
+
+/********** Base styles **********/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    
+}
+body {
+    background-color: rgb(182, 199, 197);
+}
+
+h1 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 175%;
+}
+
+.row {
+    width: 95%; /* compared to the body */
+    /* the following two lines centre the .row inside the body */
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 1px solid black; */
+    overflow: auto;
+}
+
+section {
+    background-color: rgb(222, 231, 228);
+    position:relative;
+    border: 1px solid black;
+    float: left;
+}
+
+.title-region {
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 1px solid black;
+    padding: 3px 0px;
+    font-size: 125%;
+    width: 150px;    
+}
+
+section > div {
+    margin-top: 40px; /* so that the text does not overlap with the title-region */
+    padding: 7px;
+}
+
+#chicken {
+    background-color:  rgb(236, 234, 106);
+}
+
+#beef {
+    background-color: rgb(165, 127, 127);
+}
+
+#sushi {
+    background-color: rgb(118, 204, 155);
+}
+
+/********** Desktop version **********/
+
+@media (min-width: 992px) {
+
+section {
+    width: calc((100% - 40px) / 3); /* formula used to make sure all sections occupy equal amount of space, AND to leave some space for horizontal margins */
+}  
+
+section:nth-of-type(n + 2) {
+    margin-left: 20px; /* section 2 and 3 both have left margins */
+}
+
+}
+
+/********** Tablet version **********/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    .col-md-6 {
+        width: calc((100% - 20px) / 2); /* formula used to make sure the first two sections occupy equal amount of space, AND to leave some space for horizontal margins */
+    }
+
+    .col-md-6:nth-of-type(n + 2) {
+        margin-left: 20px;  /* section 2 a.k.a. beef has a left margin */
+    }
+
+    .col-md-12 {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+}
+
+/********** Mobile version version **********/
+
+@media (max-width: 767px) {
+    
+    section:nth-of-type(n + 2) {
+        margin-top: 20px; /* all sections except the first one have a top margin */     
+    }
+
+}
