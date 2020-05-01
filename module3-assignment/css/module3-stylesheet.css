@@ -1,0 +1,108 @@
+/********** Base styles **********/
+
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;    
+}
+
+/** HEADER **/
+
+#header-nav {
+    background-color: rgb(176, 205, 218);
+    border-radius: 0;
+    border: 2px solid black;}
+
+.navbar-brand {
+    padding-top: 15px;
+}
+
+.navbar-brand h1 { /* Food, LLC*/
+    color: black;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none; /* do not want that underline*/
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px solid black;
+}
+
+#nav-list {
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+#nav-list a {
+    color: black;
+    font-size: 1.2em;
+    border: .7px solid black;
+}
+
+#nav-list a:hover {
+    background: #e7e7e7;
+}
+
+/** END HEADER **/
+
+/** HOME PAGE **/
+
+.row {
+    /* the following two lines centre the .row inside the .container */
+    margin-right: auto;
+    margin-left: auto;
+    /* border: 1px solid black; */
+    /* overflow: auto; */
+}    
+
+#our-menu-title {
+    margin: 0 0 30px 0;
+}
+
+section > div {
+    background-color: rgb(176, 205, 218);
+    border: 1px solid black;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/*section > div > h3 {
+    text-align: center;
+    font-weight: bold;
+} */
+
+section p {
+    font-size: 1.2em;
+    line-height: 2;
+    padding: 0 20px 20px 20px;
+}
+
+section span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+
+/** END HOME PAGE **/
+
+/********** END Base styles **********/
+
+/********** Large Devices -lg- (Desktop version) **********/
+@media (min-width: 1200px) {}
+
+/********** Medium Devices -md- (Desktop version) **********/
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/********** Small Devices -sm- (Tablet version) **********/
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/********** Extra Small Devices -xs- (Mobile version)  **********/
+@media (max-width: 767px) {}
+
